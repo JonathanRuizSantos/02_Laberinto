@@ -1,0 +1,11 @@
+Practica 2
+
+https://www.discoduroderoer.es/como-funciona-la-clase-stack-de-c-sharp/#:~:text=La%20clase%20Stack%20de%20C%23%20(pila%20en%20ingles)%2C%20es,de%20números%2C%20objetos%2C%20etc.
+
+1.- punto inicial en (0,0)
+2.- Guardar la posicion en la que se encuentra dentro de la cola 
+2.1.- Si es la posición final "solución encontrada)
+3.- Si no dentro de un try catch revisar la posición de la casilla que esta en j-1 (arriba) 
+4.- Si no existe o si ya esta dentro de la cola o si textura=pared avanzar a j+1 (abajo) 
+5.- Si no existe o si ya esta dentro de la cola o si textura=pared retroceder i-1 (izquierda)
+6.- Si no existe o si ya esta dentro de la cola o si textura=pared avanzar i+1 (derecha)
