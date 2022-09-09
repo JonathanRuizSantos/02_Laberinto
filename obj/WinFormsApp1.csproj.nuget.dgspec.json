@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jon_r\\Documents\\Copia de seguridad USB\\IPN 9\\Agentes_Inteligentes_Expertos\\Codigos\\02_Laberinto\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "C:\\Users\\jon_r\\Documents\\Copia_de_seguridad_USB\\IPN_9\\Agentes_Inteligentes_Expertos\\Codigos\\02_Laberinto\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jon_r\\Documents\\Copia de seguridad USB\\IPN 9\\Agentes_Inteligentes_Expertos\\Codigos\\02_Laberinto\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "C:\\Users\\jon_r\\Documents\\Copia_de_seguridad_USB\\IPN_9\\Agentes_Inteligentes_Expertos\\Codigos\\02_Laberinto\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jon_r\\Documents\\Copia de seguridad USB\\IPN 9\\Agentes_Inteligentes_Expertos\\Codigos\\02_Laberinto\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "C:\\Users\\jon_r\\Documents\\Copia_de_seguridad_USB\\IPN_9\\Agentes_Inteligentes_Expertos\\Codigos\\02_Laberinto\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Users\\jon_r\\Documents\\Copia de seguridad USB\\IPN 9\\Agentes_Inteligentes_Expertos\\Codigos\\02_Laberinto\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectPath": "C:\\Users\\jon_r\\Documents\\Copia_de_seguridad_USB\\IPN_9\\Agentes_Inteligentes_Expertos\\Codigos\\02_Laberinto\\WinFormsApp1\\WinFormsApp1.csproj",
         "packagesPath": "C:\\Users\\jon_r\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jon_r\\Documents\\Copia de seguridad USB\\IPN 9\\Agentes_Inteligentes_Expertos\\Codigos\\02_Laberinto\\WinFormsApp1\\obj\\",
+        "outputPath": "C:\\Users\\jon_r\\Documents\\Copia_de_seguridad_USB\\IPN_9\\Agentes_Inteligentes_Expertos\\Codigos\\02_Laberinto\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

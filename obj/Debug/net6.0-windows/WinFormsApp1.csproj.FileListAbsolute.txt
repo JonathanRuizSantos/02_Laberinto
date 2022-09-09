@@ -49,3 +49,20 @@ C:\Users\jon_r\Documents\Copia de seguridad USB\IPN 9\Agentes_Inteligentes_Exper
 C:\Users\jon_r\Documents\Copia de seguridad USB\IPN 9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
 C:\Users\jon_r\Documents\Copia de seguridad USB\IPN 9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
 C:\Users\jon_r\Documents\Copia de seguridad USB\IPN 9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.exe
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.deps.json
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.runtimeconfig.json
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.dll
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.pdb
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form1.resources
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.GenerateResource.cache
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfo.cs
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.dll
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\refint\WinFormsApp1.dll
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
+C:\Users\jon_r\Documents\Copia_de_seguridad_USB\IPN_9\Agentes_Inteligentes_Expertos\Codigos\02_Laberinto\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
