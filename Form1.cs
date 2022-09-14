@@ -1,26 +1,32 @@
+using System;
+using System.Collections;
+using System.Security.Cryptography.X509Certificates;
+
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
         int nfilas = 11;
         int ncol = 11;
-        int x = 0;
-        int y = 0;
-        int cx = 0;
-        int cy = 0;
-        int[] Arreglo = new int[2];
+        string[] corte_coor;
+        int x;
+        int y;
+        int Arreglo_0;
+        int Arreglo_1;
+        string Arreglo_01;
         int[,] Laberinto = new int[11, 11];
-        int[] Coordenadas = new int[2];
+        object Coordenadas;
         int[] Coor = new int[2];
-        Queue<int[]> cola = new Queue<int[]>();
-        
-
+        string estado = "";
+        string Coor_cadena = "";
+        Queue cola = new Queue();
 
         public Form1()
         {
             InitializeComponent();
         }
 
+        // ******************************************************************************* BOTON GRAFICOS
         private void bt_Graphics_Click(object sender, EventArgs e)
         {
             Random k;
@@ -29,21 +35,9 @@ namespace WinFormsApp1
             Graphics g = pB.CreateGraphics();
             Pen lapiz = new Pen(Color.DarkBlue);
             Size s = new System.Drawing.Size(50, 50);
-            //SolidBrush brocha = new SolidBrush(Color.AliceBlue);
             Image pasto = Image.FromFile(@"pasto.bmp");
-            //             Bitmap image1 = (Bitmap) Image.FromFile(@"pasto.bmp", true);
-            //             TextureBrush pasto = new TextureBrush(image1);
             Image pared = Image.FromFile(@"pared.bmp");
-
-            //             Bitmap image2 = (Bitmap)Image.FromFile(@"pared.bmp", true);
-            //            TextureBrush pared = new TextureBrush(image2);
-            //             Bitmap image3 = Bitmap(Image.FromFile(@"entrada.bmp", true), s);
             Image entrada = Image.FromFile(@"entrada.bmp");
-
-            //             Bitmap image3 = (Bitmap)Image.FromFile(@"entrada.bmp", true);
-            //            TextureBrush entrada = new TextureBrush(image3);
-
-            //TextureBrush textura;
             Image textura;
             Point p = new Point(0, 0);
             Rectangle[,] r;
@@ -80,8 +74,6 @@ namespace WinFormsApp1
                     Laberinto[i, j] = valor;
                     r[i, j].Location = p;
                     r[i, j].Size = s;
-                    //                    g.DrawRectangle(lapiz, r[i, j]);
-                    //                    g.FillRectangle(textura, r[i, j]);
                     g.DrawImage(textura, r[i, j]);
                     p.X += 50;
                 }
@@ -92,82 +84,111 @@ namespace WinFormsApp1
 
         }
 
+        // **************************************************************************** BOTON SOLUCION
         private void btSolucion_Click(object sender, EventArgs e)
         {
-            lbCola.Items.Clear();
-            lbPila.Items.Clear();
-            Arreglo[0] = 0;
-            Arreglo[1] = 0;
-            cola.Enqueue(Arreglo);
+            string aux_coor;
+            limpia_variables();
+
+            Arreglo_0 = 0;
+            Arreglo_1 = 0;
+            Arreglo_01 = Arreglo_0.ToString() + "," + Arreglo_1.ToString();
+            estado = estado + Arreglo_01 + "-";
+            Coor_cadena = Arreglo_0.ToString() + "," + Arreglo_1.ToString();
+            cola.Enqueue(Arreglo_01);
             imprime_Cola();
 
-            int contador_cola = cola.Count;
-            while (contador_cola>0)
-            {
-                
-                Coordenadas = cola.Dequeue();
-                x = Coordenadas[0];
-                y = Coordenadas[1];
-                lbPila.Items.Add(x + "," + y + " Es la coordenada elimnada");
 
-                for (int Edo=0; Edo<4; Edo++)
+            while (cola.Count > 0)
+            {
+                Coordenadas = cola.Dequeue();
+                aux_coor = Coordenadas.ToString() + "-";
+                corte_coor = aux_coor.Split(',', '-');
+                x = int.Parse(corte_coor[0]);
+                y = int.Parse(corte_coor[1]);
+
+                for (int Edo = 0; Edo < 4; Edo++)
                 {
-                    if (Edo==0 && x!=0 && Laberinto[x-1,y]==0)
+                    
+                    if (Edo==0 && x>0 && Laberinto[x-1,y]==0)
                     {
-                        //Coor[0] = x - 1;
-                        //Coor[1] = y;
-                        //guardado_Cola();
-                    }
-                    else if (Edo==1 && x!=10 && Laberinto[x+1,y]==0)
-                    {
-                        Coor[0] = x + 1;
+                        Coor[0] = x-1;
                         Coor[1] = y;
+                        Coor_cadena = Coor[0].ToString() + "," + Coor[1].ToString();
+                        guardado_Cola();
+                        
+                        
+                    }
+                    else if (Edo==1 && x<10 && Laberinto[x+1,y]==0)
+                    {
+                        Coor[0] = x+1;
+                        Coor[1] = y;
+                        Coor_cadena = Coor[0].ToString() + "," + Coor[1].ToString();
                         guardado_Cola();
                     }
-                    else if (Edo==2 && y!=0 && Laberinto[x,y-1] == 0)
+                    else if (Edo==2 && y>0 && Laberinto[x,y-1] == 0)
                     {
-                        //Coor[0] = x;
-                        //Coor[1] = y-1;
-                        //guardado_Cola(); 
+                        Coor[0] = x;
+                        Coor[1] = y-1;
+                        Coor_cadena = Coor[0].ToString() + "," + Coor[1].ToString();
+                        guardado_Cola();
                     }
-                    else if (Edo==3 && y!=10 && Laberinto[x,y+1]==0)
+                    else if (Edo==3 && y<10 && Laberinto[x,y+1]==0)
                     {
                         Coor[0] = x;
                         Coor[1] = y+1;
+                        Coor_cadena = Coor[0].ToString() + "," + Coor[1].ToString();
                         guardado_Cola();
                     }
                 }
+
                 imprime_Cola();
-                contador_cola = cola.Count;
+                if (cola.Count < 1 && (Coor[0]!=10 || Coor[1]!=10))
+                {
+                    MessageBox.Show("El laberinto no tiene solucion");
+                }
+                else if(Coor[0] == 10 && Coor[1] == 10)
+                {
+                    MessageBox.Show("Solucion Encontrada");
+                    cola.Clear();
+                    //break;
+
+                }
+
             }
+
         }
+
+        // *********************************************************************************** FUNCIONES
         public void imprime_Cola()
         {
             string suma = "";
-            int contador = 0;
-            
-            while (contador <= cola.Count)
+            foreach (object ind in cola)
             {
-                foreach (int[] ind in cola)
-                {
-                    suma = suma + ind[contador];
-                }
-                contador++;
+                suma = suma + ind + "-";
             }
-
-            lbCola.Items.Add(". " + suma);
+            lbCola.Items.Add(suma);
         }
         public void guardado_Cola()
         {
-            if (cola.Contains(Coor))
+            
+            if (Coor[0] <= 10 && Coor[1] <= 10 && estado.Contains(Coor_cadena) == false && cola.Contains(Coor) == false)
             {
-                lbPila.Items.Add(Coor[0] + "," + Coor[1] + " ya esta en la cola");
+                Arreglo_0 = Coor[0];
+                Arreglo_1 = Coor[1];
+                Arreglo_01 = Arreglo_0 + "," + Arreglo_1;
+                estado = estado + Arreglo_01 + "-";
+                cola.Enqueue(Arreglo_01);
             }
-            else
-            {
-                cola.Enqueue(Coor);
-                lbPila.Items.Add(Coor[0] + "," + Coor[1] + " Se agrego a cola");
-            }
-        }  
+        }
+        public void limpia_variables()
+        {
+            lbCola.Items.Clear();
+            lbPila.Items.Clear();
+            cola.Clear();
+            estado = "";
+            Coor_cadena = "";
+        }
+
     }
 }
