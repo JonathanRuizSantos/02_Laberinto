@@ -40,7 +40,7 @@
             // 
             // bt_Graphics
             // 
-            this.bt_Graphics.Location = new System.Drawing.Point(613, 478);
+            this.bt_Graphics.Location = new System.Drawing.Point(708, 478);
             this.bt_Graphics.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bt_Graphics.Name = "bt_Graphics";
             this.bt_Graphics.Size = new System.Drawing.Size(131, 36);
@@ -60,7 +60,7 @@
             // 
             // btSolucion
             // 
-            this.btSolucion.Location = new System.Drawing.Point(750, 478);
+            this.btSolucion.Location = new System.Drawing.Point(866, 478);
             this.btSolucion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btSolucion.Name = "btSolucion";
             this.btSolucion.Size = new System.Drawing.Size(133, 36);
@@ -77,7 +77,7 @@
             this.lbCola.Location = new System.Drawing.Point(613, 77);
             this.lbCola.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbCola.Name = "lbCola";
-            this.lbCola.Size = new System.Drawing.Size(270, 164);
+            this.lbCola.Size = new System.Drawing.Size(475, 164);
             this.lbCola.TabIndex = 3;
             // 
             // lbPila
@@ -88,7 +88,7 @@
             this.lbPila.Location = new System.Drawing.Point(613, 286);
             this.lbPila.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbPila.Name = "lbPila";
-            this.lbPila.Size = new System.Drawing.Size(270, 164);
+            this.lbPila.Size = new System.Drawing.Size(475, 164);
             this.lbPila.TabIndex = 4;
             // 
             // label1
@@ -118,7 +118,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(905, 670);
+            this.ClientSize = new System.Drawing.Size(1100, 672);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbPila);

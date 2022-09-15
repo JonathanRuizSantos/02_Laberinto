@@ -20,6 +20,7 @@ namespace WinFormsApp1
         string estado = "";
         string Coor_cadena = "";
         Queue cola = new Queue();
+        Stack pila = new Stack();
 
         public Form1()
         {
@@ -87,6 +88,8 @@ namespace WinFormsApp1
         // **************************************************************************** BOTON SOLUCION
         private void btSolucion_Click(object sender, EventArgs e)
         {
+            // --------------------------------------  SOLUCION DE LA COLA
+
             string aux_coor;
             limpia_variables();
 
@@ -97,7 +100,6 @@ namespace WinFormsApp1
             Coor_cadena = Arreglo_0.ToString() + "," + Arreglo_1.ToString();
             cola.Enqueue(Arreglo_01);
             imprime_Cola();
-
 
             while (cola.Count > 0)
             {
@@ -145,18 +147,87 @@ namespace WinFormsApp1
                 imprime_Cola();
                 if (cola.Count < 1 && (Coor[0]!=10 || Coor[1]!=10))
                 {
-                    MessageBox.Show("El laberinto no tiene solucion");
+                    MessageBox.Show("El laberinto no tiene solucion por Cola");
                 }
                 else if(Coor[0] == 10 && Coor[1] == 10)
                 {
-                    MessageBox.Show("Solucion Encontrada");
-                    cola.Clear();
-                    //break;
+                    MessageBox.Show("Solucion Encontrada con lista tipo Cola");
+                    //cola.Clear();
+                    break;
 
                 }
 
             }
 
+            // --------------------------------------  SOLUCION DE LA PILA
+            estado = "";
+            Coor_cadena = "";
+
+            Arreglo_0 = 0;
+            Arreglo_1 = 0;
+            Arreglo_01 = Arreglo_0.ToString() + "," + Arreglo_1.ToString();
+            estado = estado + Arreglo_01 + "-";
+            Coor_cadena = Arreglo_0.ToString() + "," + Arreglo_1.ToString();
+            pila.Push(Arreglo_01);
+            imprime_Pila();
+
+            while (pila.Count > 0)
+            {
+                Coordenadas = pila.Pop();
+                aux_coor = Coordenadas.ToString() + "-";
+                corte_coor = aux_coor.Split(',', '-');
+                x = int.Parse(corte_coor[0]);
+                y = int.Parse(corte_coor[1]);
+
+                for (int Edo = 0; Edo < 4; Edo++)
+                {
+
+                    if (Edo == 0 && x > 0 && Laberinto[x - 1, y] == 0)
+                    {
+                        Coor[0] = x - 1;
+                        Coor[1] = y;
+                        Coor_cadena = Coor[0].ToString() + "," + Coor[1].ToString();
+                        guardado_Pila();
+
+
+                    }
+                    else if (Edo == 1 && x < 10 && Laberinto[x + 1, y] == 0)
+                    {
+                        Coor[0] = x + 1;
+                        Coor[1] = y;
+                        Coor_cadena = Coor[0].ToString() + "," + Coor[1].ToString();
+                        guardado_Pila();
+                    }
+                    else if (Edo == 2 && y > 0 && Laberinto[x, y - 1] == 0)
+                    {
+                        Coor[0] = x;
+                        Coor[1] = y - 1;
+                        Coor_cadena = Coor[0].ToString() + "," + Coor[1].ToString();
+                        guardado_Pila();
+                    }
+                    else if (Edo == 3 && y < 10 && Laberinto[x, y + 1] == 0)
+                    {
+                        Coor[0] = x;
+                        Coor[1] = y + 1;
+                        Coor_cadena = Coor[0].ToString() + "," + Coor[1].ToString();
+                        guardado_Pila();
+                    }
+                }
+
+                imprime_Pila();
+                if (pila.Count < 1 && (Coor[0] != 10 || Coor[1] != 10))
+                {
+                    MessageBox.Show("El laberinto no tiene solucion por Pila");
+                }
+                else if (Coor[0] == 10 && Coor[1] == 10)
+                {
+                    MessageBox.Show("Solucion Encontrada con lista tipo Pila");
+                    //pila.Clear();
+                    break;
+
+                }
+
+            }
         }
 
         // *********************************************************************************** FUNCIONES
@@ -186,8 +257,33 @@ namespace WinFormsApp1
             lbCola.Items.Clear();
             lbPila.Items.Clear();
             cola.Clear();
+            pila.Clear();
             estado = "";
             Coor_cadena = "";
+        }
+
+        public void imprime_Pila()
+        {
+            string suma = "";
+            foreach (object ind in pila)
+            {
+                suma = suma + ind + "-";
+            }
+            lbPila.Items.Add(suma);
+        }
+
+        public void guardado_Pila()
+        {
+
+            if (Coor[0] <= 10 && Coor[1] <= 10 && estado.Contains(Coor_cadena) == false && pila.Contains(Coor) == false)
+            {
+                Arreglo_0 = Coor[0];
+                Arreglo_1 = Coor[1];
+                Arreglo_01 = Arreglo_0 + "," + Arreglo_1;
+                estado = estado + Arreglo_01 + "-";
+                pila.Push(Arreglo_01);
+
+            }
         }
 
     }
