@@ -118,8 +118,7 @@ namespace WinFormsApp1
                         Coor[1] = y;
                         Coor_cadena = Coor[0].ToString() + "," + Coor[1].ToString();
                         guardado_Cola();
-                        
-                        
+ 
                     }
                     else if (Edo==1 && x<10 && Laberinto[x+1,y]==0)
                     {
@@ -154,7 +153,6 @@ namespace WinFormsApp1
                     MessageBox.Show("Solucion Encontrada con lista tipo Cola");
                     //cola.Clear();
                     break;
-
                 }
 
             }
